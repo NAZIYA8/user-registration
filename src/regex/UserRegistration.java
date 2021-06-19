@@ -58,15 +58,32 @@ public class UserRegistration {
      */
     public void validateEmail() {
         System.out.println("Enter Email Id");
-        String lastName = scan.nextLine();
+        String email = scan.nextLine();
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+([+.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?");
-        Matcher matcher = pattern.matcher((lastName));
+        Matcher matcher = pattern.matcher((email));
         boolean check = matcher.matches();
         if (check) {
             System.out.println("Entered Email Id is Valid");
         } else {
-            System.out.println("Entered Email Id is invalid");
+            System.out.println("Entered Email Id is Invalid");
         }
     }
 
+    /**
+     * This method is used to take the Phone number as input and
+     * checks if it is valid or not.
+     */
+    public void validatePhoneNumber() {
+        System.out.println("Enter the phone number ");
+        String phoneNumber = scan.nextLine();
+        Pattern pattern = Pattern.compile("^[0-9]{2}\\s{1}[0-9]{10}");
+        Matcher matcher = pattern.matcher((phoneNumber));
+        boolean check = matcher.matches();
+        if (check) {
+            System.out.println("Entered Phone Number is Valid");
+        } else {
+            System.out.println("Entered Phone Number is Invalid");
+        }
+    }
+    
 }
