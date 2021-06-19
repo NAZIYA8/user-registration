@@ -5,7 +5,7 @@
  *
  * @author Syeda Naziya
  * @version 1.0
- * @since 17-06-2021
+ * @since 19-06-2021
  * ****************************************************************************
  */
 package regex;
@@ -92,7 +92,7 @@ public class UserRegistration {
      * Rule1: Minimum 8 characters.
      * Rule2: Should have at least 1 upper case.
      * Rule3: Should have at least 1 numeric.
-     * Rule4:
+     * Rule4: Should have exactly 1 special character.
      */
     public void validatePassword() {
         System.out.println("Enter the password ");
