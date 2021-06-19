@@ -92,11 +92,12 @@ public class UserRegistration {
      * Rule1: Minimum 8 characters.
      * Rule2: Should have at least 1 upper case.
      * Rule3: Should have at least 1 numeric.
+     * Rule4:
      */
     public void validatePassword() {
         System.out.println("Enter the password ");
         String password = scan.nextLine();
-        Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*\\d).{8,}$");
+        Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*\\d)(?=.*?[!@#$%^&*?=-]).{8,}$");
         Matcher matcher = pattern.matcher((password));
         boolean check = matcher.matches();
         if (check) {
