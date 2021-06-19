@@ -1,7 +1,7 @@
 /**
  * ****************************************************************************
  * Purpose: This class contains a number of methods. It helps the main method
- *          to call these methods any number of times.
+ * to call these methods any number of times.
  *
  * @author Syeda Naziya
  * @version 1.0
@@ -40,15 +40,16 @@ public class UserRegistration {
      * check if it is valid or not.
      */
     public void validateLastName() {
-        System.out.println("Enter First Name ");
+        System.out.println("Enter Last Name ");
         String lastName = scan.nextLine();
         Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2,}");
         Matcher matcher = pattern.matcher((lastName));
         boolean check = matcher.matches();
         if (check) {
-            System.out.println("First Name is Valid");
+            System.out.println("Last Name is Valid");
         } else {
-            System.out.println("First name is invalid");
+            System.out.println("Last name is invalid");
         }
     }
+    
 }

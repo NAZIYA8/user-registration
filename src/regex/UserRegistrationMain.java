@@ -1,7 +1,7 @@
 /**
  * ****************************************************************************
  * Purpose: This class contains main method where the program execution is
- *          carried out.
+ * carried out.
  *
  * @author Syeda Naziya
  * @version 1.0
