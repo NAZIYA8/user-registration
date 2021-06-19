@@ -15,8 +15,8 @@ public class UserRegistrationMain {
 
     static UserRegistration user = new UserRegistration();
 
-
     public static void main(String[] args) {
         user.validateFirstName();
+        user.validateLastName();
     }
 }
