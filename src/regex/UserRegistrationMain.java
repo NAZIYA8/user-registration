@@ -21,5 +21,6 @@ public class UserRegistrationMain {
         user.validateEmail();
         user.validatePhoneNumber();
         user.validatePassword();
+        user.validateMultipleEmail();
     }
 }

@@ -106,4 +106,21 @@ public class UserRegistration {
             System.out.println("Entered Password is Invalid");
         }
     }
+
+    /**
+     * This method is used to check for multiple email id's
+     * if valid or not
+     */
+    public void validateMultipleEmail() {
+        System.out.println("Enter Email Id");
+        String email = scan.nextLine();
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+([+.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?");
+        Matcher matcher = pattern.matcher((email));
+        boolean check = matcher.matches();
+        if (check) {
+            System.out.println("Entered Email Id is Valid");
+        } else {
+            System.out.println("Entered Email Id is Invalid");
+        }
+    }
 }
