@@ -89,12 +89,13 @@ public class UserRegistration {
     /**
      * UC5:This method is used to take the Password as input and
      * checks if it is valid or not.
-     * Rule1: Minimum 8 characters
+     * Rule1: Minimum 8 characters.
+     * Rule2: Should have atleast 1 upper case.
      */
     public void validatePassword() {
         System.out.println("Enter the password ");
         String password = scan.nextLine();
-        Pattern pattern = Pattern.compile(".{8,}");
+        Pattern pattern = Pattern.compile("^(?=.*[A-Z]).{8,}$");
         Matcher matcher = pattern.matcher((password));
         boolean check = matcher.matches();
         if (check) {
