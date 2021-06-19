@@ -20,5 +20,6 @@ public class UserRegistrationMain {
         user.validateLastName();
         user.validateEmail();
         user.validatePhoneNumber();
+        user.validatePassword();
     }
 }

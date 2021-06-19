@@ -85,5 +85,22 @@ public class UserRegistration {
             System.out.println("Entered Phone Number is Invalid");
         }
     }
-    
+
+    /**
+     * UC5:This method is used to take the Password as input and
+     * checks if it is valid or not.
+     * Rule1: Minimum 8 characters
+     */
+    public void validatePassword() {
+        System.out.println("Enter the password ");
+        String password = scan.nextLine();
+        Pattern pattern = Pattern.compile(".{8,}");
+        Matcher matcher = pattern.matcher((password));
+        boolean check = matcher.matches();
+        if (check) {
+            System.out.println("Entered Password is Valid");
+        } else {
+            System.out.println("Entered Password is Invalid");
+        }
+    }
 }
