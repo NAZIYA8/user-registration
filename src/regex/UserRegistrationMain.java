@@ -18,5 +18,6 @@ public class UserRegistrationMain {
     public static void main(String[] args) {
         user.validateFirstName();
         user.validateLastName();
+        user.validateEmail();
     }
 }

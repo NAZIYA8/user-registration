@@ -51,5 +51,22 @@ public class UserRegistration {
             System.out.println("Last name is invalid");
         }
     }
-    
+
+    /**
+     * This method is used to take the Email id of user as input
+     * and check if it is valid or not.
+     */
+    public void validateEmail() {
+        System.out.println("Enter Email Id");
+        String lastName = scan.nextLine();
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+([+.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?");
+        Matcher matcher = pattern.matcher((lastName));
+        boolean check = matcher.matches();
+        if (check) {
+            System.out.println("Entered Email Id is Valid");
+        } else {
+            System.out.println("Entered Email Id is invalid");
+        }
+    }
+
 }
